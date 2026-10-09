@@ -1,0 +1,11 @@
+# Netlify headers. Cross-origin isolation enables multi-threaded WebAssembly for the
+# piano model (the service worker adds these too, as a fallback for other hosts).
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+
+/piano-model/*
+  Cache-Control: public, max-age=604800
+
+/ort/*
+  Cache-Control: public, max-age=604800
